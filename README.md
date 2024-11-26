@@ -30,7 +30,6 @@ A Flutter-based mobile application that enables users to upload or capture skin 
    ```bash
    flutter run
    ```
-
 ## TensorFlow Lite Integration
 To use the TensorFlow Lite model for skin cancer detection:
 1. Convert your trained TensorFlow model to TFLite format.
@@ -71,4 +70,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 For any questions or feedback:
 - GitHub: [MrChahine](https://github.com/MrChahine)
-```
