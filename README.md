@@ -1,4 +1,3 @@
-```
 # ScanCan - Skin Cancer Detection App
 
 A Flutter-based mobile application that enables users to upload or capture skin photos and detects potential skin cancer using a TensorFlow Lite machine learning model. This app features user authentication, a history log of past analyses, and an intuitive user interface.
