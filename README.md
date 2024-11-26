@@ -1,10 +1,25 @@
-# Welcome, Login, Signup Page - Flutter U
+# Skin Cancer Detection App
 
-A Simple Project
+A Flutter-based mobile application that enables users to upload or capture skin photos and detects potential skin cancer using a TensorFlow Lite machine learning model. This app features user authentication, a history log of past analyses, and an intuitive user interface.
 
-## Getting Started
+## Features
+- **Login/Signup Interface**: Secure user authentication system.
+- **Skin Photo Detection**: Analyze photos using a pre-trained TensorFlow Lite model.
+- **Photo Upload Options**: Capture photos using the device camera or upload from local files.
+- **History Log**: Track and manage previous analyses for each user.
 
-This project is a starting point for a Flutter application.
+## Screenshots
+(Add screenshots of your app here when available.)
 
+## Installation
 
-Review The Project in Linkedin : https://www.linkedin.com/posts/khaledkamal1_flutter-dart-ai-activity-7241062253502902272-LPeH?utm_source=share&utm_medium=member_desktop
+### Prerequisites
+- [Flutter](https://docs.flutter.dev/get-started/install) installed on your machine.
+- Dart SDK.
+- Compatible IDE (e.g., Android Studio, VS Code).
+
+### Steps to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/skin-cancer-detection-app.git
+   cd skin-cancer-detection-app
