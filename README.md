@@ -21,5 +21,5 @@ A Flutter-based mobile application that enables users to upload or capture skin 
 ### Steps to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/skin-cancer-detection-app.git
+   git clone https://github.com/MrChahine/ScanCan.git
    cd skin-cancer-detection-app
