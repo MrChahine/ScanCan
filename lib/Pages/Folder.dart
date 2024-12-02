@@ -107,44 +107,50 @@ class _FolderScreenState extends State<FolderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Skin Cancer Detection")),
-      body: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : _image == null
-              ? Center(
-                  child: ElevatedButton(
-                    onPressed: _takePhoto,
-                    child: const Text("Capture Image"),
-                  ),
-                )
-              : SingleChildScrollView(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          if (_image != null) Image.file(_image!, height: 300),
-                          const SizedBox(height: 20),
-                          Text(
-                            "Prediction: $_label",
-                            style: const TextStyle(fontSize: 20),
-                          ),
-                          Text(
-                            "Confidence: ${_confidence.toStringAsFixed(2)}%",
-                            style: const TextStyle(fontSize: 20),
-                          ),
-                          const SizedBox(height: 20),
-                          ElevatedButton(
-                            onPressed: _takePhoto,
-                            child: const Text("Retake Photo"),
-                          ),
-                        ],
+    return SafeArea(
+      child: Scaffold(
+        body: SizedBox(
+          width: double.infinity,
+          height: double.infinity,
+          child: Center(
+            child: _loading
+                ? const Center(child: CircularProgressIndicator())
+                : _image == null
+                    ? ElevatedButton(
+                        onPressed: _takePhoto,
+                        child: const Text("Import Image"),
+                      )
+                    : SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            if (_image != null)
+                              Container(
+                                constraints: const BoxConstraints(
+                                    maxWidth: 350), // Adjust width as necessary
+                                child: Image.file(_image!, height: 300),
+                              ),
+                            const SizedBox(height: 20),
+                            Text(
+                              "Prediction: $_label",
+                              style: const TextStyle(fontSize: 20),
+                            ),
+                            Text(
+                              "Confidence: ${_confidence.toStringAsFixed(2)}%",
+                              style: const TextStyle(fontSize: 20),
+                            ),
+                            const SizedBox(height: 20),
+                            ElevatedButton(
+                              onPressed: _takePhoto,
+                              child: const Text("Retake Photo"),
+                            ),
+                          ],
+                        ),
                       ),
-                    ],
-                  ),
-                ),
+          ),
+        ),
+      ),
     );
   }
 }
