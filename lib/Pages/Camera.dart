@@ -15,7 +15,6 @@ class _CameraScreenState extends State<CameraScreen> {
   bool _loading = true; // Track loading state
   String _label = ''; // Store prediction label
   double _confidence = 0.0; // Store prediction confidence
-  List<dynamic>? _outputs; // Store model outputs
   bool _isModelLoaded = false;
 
   // Load the TFLite model
@@ -57,13 +56,11 @@ class _CameraScreenState extends State<CameraScreen> {
 
       if (recognitions != null && recognitions.isNotEmpty) {
         setState(() {
-          _outputs = recognitions;
           _label = recognitions[0]['label'] ?? '';
           _confidence = (recognitions[0]['confidence'] ?? 0.0) * 100;
         });
       } else {
         setState(() {
-          _outputs = [];
           _label = 'No prediction';
           _confidence = 0.0;
         });
